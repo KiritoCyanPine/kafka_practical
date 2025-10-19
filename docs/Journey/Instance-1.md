@@ -43,3 +43,5 @@ services:
 
 - Learning about kafka-topics command to create, describe and list topics in Kafka cluster.
 - Ran a producer and consumer application to produce and consume messages to/from the Kafka cluster.
+
+- Learned about kafka-console-consumer command to read messages from a specific topic and partition.

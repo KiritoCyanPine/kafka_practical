@@ -17,14 +17,31 @@ Below commands will be ran in the terminal where Kafka is installed and running.
 #### Creating a topic :
 
 The below command creates a topic named "metrics" with 6 partitions and a replication factor of 1.
-`kafka-topics --create --topic metrics --partitions 6 --replication-factor 1 --bootstrap-server localhost:9092`
+
+```bash
+kafka-topics --create --topic metrics --partitions 6 --replication-factor 1 --bootstrap-server localhost:9092
+```
 
 #### Describing a topic :
 
 The below command describes the topic named "metrics" and provides details about its partitions, replication factor, and other configurations.
-`kafka-topics --describe --topic metrics --bootstrap-server localhost:9092`
+
+```bash
+kafka-topics --describe --topic metrics --bootstrap-server localhost:9092
+```
 
 #### Listing all topics :
 
 The below command lists all the topics available in the Kafka cluster.
-`kafka-topics --list --bootstrap-server localhost:9092`
+
+```bash
+kafka-topics --list --bootstrap-server localhost:9092
+```
+
+#### Reading messages from a topic :
+
+The below command starts a console consumer that reads messages from the "metrics" topic, starting from the beginning of partition 1.
+
+```bash
+kafka-console-consumer --bootstrap-server localhost:9092 --topic metrics --partition 1 --from-beginning
+```
